@@ -1,0 +1,252 @@
+.nav {
+  height: 5vh;
+  display: flex;
+  width: 100%;
+  h1 {
+    padding: 2rem;
+  }
+  button {
+    font-weight: 600;
+    display: flex;
+    margin-left: 75%;
+    height: 40px;
+    width: 80px;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #5c08a1c2, #02b5e2);
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    p {
+      padding-right: 0.4rem;
+    }
+    &:hover {
+      transition: all 1s ease;
+      text-decoration: underline;
+      animation: buttonhover 0.2s forwards;
+    }
+  }
+}
+@keyframes buttonhover {
+  0% {
+    background: linear-gradient(to left, #5c08a1c2, #02b5e2);
+  }
+  10% {
+  }
+  0% {
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  10% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  20% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2 #02b5e2
+    );
+  }
+  30% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  40% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  50% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  60% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  70% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2#5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  80% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  90% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  95% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  98% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  99% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #02b5e2
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to left,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2,
+      #5c08a1c2
+    );
+    border: 2px solid #02b5e2;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav {
+    button {
+      margin-left: 30%;
+      z-index: 100;
+    }
+  }
+}

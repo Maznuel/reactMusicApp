@@ -1,0 +1,465 @@
+.song-container {
+  min-height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.song-container img {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.song-container h2 {
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.song-container h3 {
+  color: #333333;
+}
+
+@media screen and (max-width: 768px) {
+  .song-container img {
+    margin-top: 20%;
+    width: 50%;
+  }
+}
+
+.player {
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.time-control {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.time-control input {
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.time-control p {
+  padding: 1rem;
+}
+
+.play-control {
+  margin-top: 0.2rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.play-control svg {
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #383838;
+}
+
+.play-control svg:hover {
+  color: #0ab0e2;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+}
+
+.track {
+  width: 100%;
+  position: relative;
+  /*background: linear-gradient(
+    to right,
+    hsla(244, 82%, 70%, 0.663),
+    #02b5e2,
+    rgb(154, 95, 231)
+  );*/
+  height: 1rem;
+  border-radius: 2rem;
+  margin-top: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.animation-track {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #e6e5e5;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 800px) {
+  .time-control {
+    width: 90%;
+  }
+}
+
+.play-control {
+  width: 60%;
+}
+
+.library {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: fixed;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: scroll;
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* background: linear-gradient(
+    to top,
+    hsla(244, 82%, 70%, 0.663),
+    #02b5e2,
+    rgb(154, 95, 231)
+  );*/
+  z-index: 10;
+  -webkit-box-shadow: 2px 2px 25px #424242;
+          box-shadow: 2px 2px 25px #424242;
+}
+
+.library img {
+  width: 100px;
+}
+
+.library h1 {
+  margin-top: 1rem;
+}
+
+.library-song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.library-song img,
+.library-song h2,
+.library-song h4 {
+  margin: 5px 5px;
+}
+
+.library-song img {
+  margin-left: 5px;
+}
+
+.library-song:hover {
+  background: rgba(38, 130, 146, 0.635);
+}
+
+.song-description {
+  padding-left: 1rem;
+}
+
+.song-description h3 {
+  font-size: 1.2rem;
+}
+
+.song-description h4 {
+  font-size: 0.9rem;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c2c2c transparent;
+}
+
+.selected {
+  background: #505050;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.clicked {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
+
+.nav {
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.nav h1 {
+  padding: 2rem;
+}
+
+.nav button {
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 75%;
+  height: 40px;
+  width: 80px;
+  margin-top: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), to(#02b5e2));
+  background: linear-gradient(to left, #5c08a1c2, #02b5e2);
+  border: 1px solid #444444;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav button p {
+  padding-right: 0.4rem;
+}
+
+.nav button:hover {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  text-decoration: underline;
+  -webkit-animation: buttonhover 0.2s forwards;
+          animation: buttonhover 0.2s forwards;
+}
+
+@-webkit-keyframes buttonhover {
+  0% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #02b5e2);
+  }
+  10% {
+  }
+  0% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  10% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  20% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#02b5e2, #5c08a1c2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2 #02b5e2);
+  }
+  30% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  40% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  50% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  60% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  70% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2, #5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2 #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  80% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  90% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  95% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  98% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  99% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#5c08a1c2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2);
+    border: 2px solid #02b5e2;
+  }
+}
+
+@keyframes buttonhover {
+  0% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #02b5e2);
+  }
+  10% {
+  }
+  0% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  10% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  20% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#02b5e2, #5c08a1c2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2 #02b5e2);
+  }
+  30% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  40% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  50% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  60% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  70% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2, #5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2 #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  80% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  90% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  95% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  98% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  99% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#02b5e2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #02b5e2);
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left top, from(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), color-stop(#5c08a1c2), to(#5c08a1c2));
+    background: linear-gradient(to left, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2, #5c08a1c2);
+    border: 2px solid #02b5e2;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav button {
+    margin-left: 30%;
+    z-index: 100;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: #333333;
+}
+
+.library h1,
+h3,
+h4 {
+  color: white;
+}
+
+.app {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.library-active {
+  margin-left: 10%;
+}
+/*# sourceMappingURL=style.css.map */
